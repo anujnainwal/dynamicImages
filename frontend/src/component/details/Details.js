@@ -36,8 +36,8 @@ const Details = () => {
   useEffect(() => {
     setLoading(true);
     const multipleTag = () => {
-      const url = `http://localhost:5000/api/v1/preview/${id}?`;
-      // const url = `http://44.206.234.148:5000/api/v1/preview/${id}?`;
+      // const url = `http://localhost:5000/api/v1/preview/${id}?`;
+      const url = `http://13.234.238.121:5000/api/v1/preview/${id}?`;
       try {
         if (inputText === undefined || inputText === null) {
           console.log("No input field");
@@ -205,8 +205,8 @@ const Details = () => {
                         finalUrl
                           ? finalUrl
                           : 
-                          `http://localhost:5000/api/v1/preview/${id}`
-                          // `http://44.206.234.148:5000/api/v1/preview/${id}`
+                          // `http://localhost:5000/api/v1/preview/${id}`
+                          `http://13.234.238.121:5000/api/v1/preview/${id}`
                       }
                       alt=""
                       loading="lazy"

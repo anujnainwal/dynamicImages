@@ -8,8 +8,8 @@ const port = process.env.PORT || 5000;
 var bodyParser = require("body-parser");
 connectDB();
 
-app.use(cors({ origin: "http://localhost:3000" }));
-// app.use(cors({ origin: "http://44.206.234.148" }));
+// app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({ origin: "http://13.234.238.121" }));
 app.use(compression({ filter: shouldCompress, level: 6 }));
 
 function shouldCompress(req, res) {
