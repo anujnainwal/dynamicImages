@@ -1,0 +1,93 @@
+.layer-Object {
+  overflow: hidden;
+  height: 70vh;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: 0 10px;
+}
+
+.layerDiv {
+  position: relative;
+  background-image: radial-gradient(
+      rgba(20, 20, 20, 0.856),
+      rgba(22, 22, 22, 0.952)
+    ),
+    url("https://t3.ftcdn.net/jpg/02/96/05/52/360_F_296055218_RXc721N9fSYIz3sEV7QALYquMVP31jdJ.jpg");
+
+  width: 150px;
+  height: 75px;
+  border: 1px solid #e7e7e7;
+  box-shadow: 1px 3px #888888;
+  cursor: pointer;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.layerDiv .text {
+  font-size: 8px;
+  color: blue;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #0c7be2;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.layerDiv:hover .overlay {
+  opacity: 1;
+  display: flex;
+}
+.hover-transparent:hover span {
+  opacity: 1;
+}
+.hover__effect_transparent {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .hover__effect_transparent input[type="range"] {
+  display: none;
+} */
+
+/* .hover__effect_transparent:hover input[type="range"] {
+  display: block;
+} */
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  .layer-Object {
+    scrollbar-width: auto;
+    scrollbar-color: #e4f038 #3f6946;
+  }
+
+  /* Chrome, Edge, and Safari */
+  .layer-Object::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .layer-Object::-webkit-scrollbar-track {
+    background: #3f6946;
+  }
+
+  .layer-Object::-webkit-scrollbar-thumb {
+    background-color: #e4f038;
+    border-radius: 15px;
+    border: 2px none #ffffff;
+  }
+  .bottom__operation{
+    margin: 20px 5px;
+  }
+  .object__layer1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+ 

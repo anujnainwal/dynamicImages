@@ -1,0 +1,16 @@
+.Canvas__Resize .canvas_button {
+  width: 100%;
+  padding: 10px;
+  margin: 0 0px 10px 0px;
+  background: #39394c;
+  border: none;
+}
+.Canvas__Resize .canvas_button:hover {
+  background: #21212e;
+  box-shadow: 0 0 2px 2px #ffffff;
+}
+.canvas__background {
+  background: #21212e;
+  height: 100vh;
+  color: #fff;
+}

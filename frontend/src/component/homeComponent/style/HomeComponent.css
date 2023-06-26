@@ -1,0 +1,144 @@
+.main__home {
+  height: 100vh;
+}
+.navLinks {
+  color: #000;
+  text-decoration: none;
+}
+.navLinks:hover {
+  color: #000;
+}
+
+.imagesLib:hover {
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+/* .image-box {
+  border: 1px solid red;
+  overflow: hidden;
+  overflow: auto;
+  display: flex;
+
+  flex-wrap: wrap;
+} */
+
+
+.folder_structure {
+  border: 1px solid #f8f8f8;
+  height: 100%;
+  width: 100%;
+  max-height: 20em;
+  overflow: auto;
+  box-shadow: 0px 0px 10px 0px black;
+}
+.folder_structure .folder_structure_heading {
+  padding: 5px;
+  background: #183daa;
+  position: sticky;
+  top: 0;
+  color: #fff;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 15px 0;
+}
+.folder_structure::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+  padding: 0 10px;
+}
+.folder_structure::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+.folder_structure::-webkit-scrollbar-thumb {
+  background: #183daa;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+.folder_structure::-webkit-scrollbar-thumb:hover {
+  background: #267ed5;
+}
+.folder_structure::-webkit-scrollbar-thumb:active {
+  background: #267ed5;
+}
+.folder_structure::-webkit-scrollbar-track {
+  background: #8f8f8f;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+.folder_structure::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+.folder_structure::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+.folder_structure::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.image-box {
+  height: 100%;
+  max-height: 25em;
+  overflow: auto;
+  box-shadow: 0px 0px 10px 3px #00000059;
+  position: relative;
+  border-radius: 10px;
+}
+.image-box .heading {
+  background: #267ed5;
+  padding: 5px;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  top: 0;
+}
+.image-box .heading h4 {
+  font-size: 15px;
+}
+.image-box img {
+  width: 35%;
+  padding: 26px 21px;
+  box-shadow: 0px 1px 8px 0px #e550506b;
+  margin: 5px 10px;
+  aspect-ratio: 4/3;
+  position: relative;
+  object-fit: cover;
+  /* justify-content: center; */
+  align-items: center;
+  left: 50%;
+  transform: translateX(-110%);
+  right: 0;
+  top: 5%;
+}
+.no-data {
+  height: 15em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination {
+  position: relative;
+  top: 10px;
+  bottom: -10px;
+  right: -50%;
+  /* border: 1px solid red; */
+  /* text-align: end; */
+  width: 50%;
+}
+
+.loading{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+.loading_spinner{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

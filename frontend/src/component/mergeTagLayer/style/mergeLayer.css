@@ -1,0 +1,35 @@
+.mergeLayer {
+  height: 100vh;
+}
+.mergeLayer .heading {
+  background: rgba(0, 0, 0, 0.842);
+  padding: 20px 0px;
+  border-bottom: 2px dashed rgb(109, 109, 109);
+}
+.mergeLayer .heading h4 {
+  text-align: center;
+  font-size: 1em;
+}
+.errors {
+  border: 1px solid red;
+}
+/* 
+border: 1px solid red;
+    padding: 5px;
+    background: red;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+ */
+.editLabel {
+  list-style: none;
+  padding: 0;
+}
+.editLabel li {
+  padding: 5px;
+  background: red;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  border-radius: 5px;
+}
