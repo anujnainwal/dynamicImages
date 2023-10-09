@@ -10,9 +10,9 @@ const saveJson = async (req, res) => {
       "utf8",
       async function (err) {
         if (err) {
-          console.log("testingLLL::::::::::::::::::::",process.cwd())
+          console.log("testingLLL::::::::::::::::::::", process.cwd());
           console.log("An error occured while writing JSON Object to File.");
-          return res.status(500).json({name:"for tsting:", error: err });
+          return res.status(500).json({ name: "for tsting:", error: err });
         } else {
           let imgId = await Image.findOneAndUpdate(
             { _id: idImage },
@@ -21,13 +21,15 @@ const saveJson = async (req, res) => {
                 path: "./uploads/json/" + idImage + ".json",
               },
             }
-          );  
-          console.log("SAVED::::::::::::::::::::::::::::::::::::::::::::::::::::",imgId)
+          );
+          console.log(
+            "SAVED::::::::::::::::::::::::::::::::::::::::::::::::::::",
+            imgId
+          );
           return res.status(200).json({ message: "Data save successfull" });
         }
       }
     );
-
 
     // fs.writeFile(
     //   ".../uploads/json/" + idImage + ".json",
@@ -46,15 +48,17 @@ const saveJson = async (req, res) => {
     //             path: "./uploads/json/" + idImage + ".json",
     //           },
     //         }
-    //       );  
+    //       );
     //       console.log("SAVED::::::::::::::::::::::::::::::::::::::::::::::::::::",imgId)
     //       return res.status(200).json({ message: "Data save successfull" });
     //     }
     //   }
     // );
   } catch (error) {
-    console.log("newERROOOOOOOOOOOOOR:",error);
-    return res.status(500).json({msg:"last-cathc::::::::::::", error: error.message });
+    console.log("newERROOOOOOOOOOOOOR:", error.message);
+    return res
+      .status(500)
+      .json({ msg: "last-cathc::::::::::::", error: error.message });
   }
 };
 module.exports = saveJson;

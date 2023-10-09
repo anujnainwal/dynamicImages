@@ -11,10 +11,9 @@ import {
   OverlayTrigger,
   Tooltip,
   Card,
- 
 } from "react-bootstrap";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
-import { FiClipboard, FiEdit3,FiRotateCcw } from "react-icons/fi";
+import { FiClipboard, FiEdit3, FiRotateCcw } from "react-icons/fi";
 import { InputControl } from "./InputControl";
 import Loader from "../loader/Loader";
 
@@ -26,18 +25,17 @@ const Details = () => {
   const [loading, setLoading] = useState(false);
   const [show, toggleShow] = useState(false);
   const total = location.state ? location.state.totalObjects : [];
-  console.log(location)
+  console.log(location);
 
   const [inputText, setInputText] = useState(total);
   const [finalUrl, setFinalUrl] = useState("");
   const [data, setData] = useState([]);
 
-
   useEffect(() => {
     setLoading(true);
     const multipleTag = () => {
       // const url = `http://localhost:5000/api/v1/preview/${id}?`;
-      const url = `http://13.234.238.121:5000/api/v1/preview/${id}?`;
+      const url = `http://16.171.3.157:5000/api/v1/preview/${id}?`;
       try {
         if (inputText === undefined || inputText === null) {
           console.log("No input field");
@@ -53,7 +51,7 @@ const Details = () => {
               "&" + tag.text + "=" + `${data[index] ? data[index] : tag.text}`;
           });
           var wowo = url + finalURL;
-          console.log(wowo)
+          console.log(wowo);
           setFinalUrl(wowo);
           return finalURL;
         }
@@ -80,7 +78,7 @@ const Details = () => {
 
   let handleCopyText = (e) => {
     const imgTag = document.querySelector("#imgCopy").textContent;
-    console.log(imgTag)
+    console.log(imgTag);
 
     navigator.clipboard
       .writeText(imgTag)
@@ -100,9 +98,7 @@ const Details = () => {
     navigate(`/image/${id}`);
   };
 
-  let randomName = () =>{
-
-  }
+  let randomName = () => {};
 
   return (
     <React.Fragment>
@@ -115,8 +111,7 @@ const Details = () => {
                 <FiEdit3 className="ms-2 me-2" /> Edit
               </>
             }
-            variant="success"
-          >
+            variant="success">
             <Dropdown.Item onClick={editHandler}>Edit</Dropdown.Item>
           </DropdownButton>
         </Row>
@@ -127,13 +122,11 @@ const Details = () => {
             defaultActiveKey="home"
             id="justify-tab-example"
             className="mb-3"
-            justify
-          >
+            justify>
             <Tab
               eventKey="home"
               title="Image Tag"
-              style={{ background: "#fff" }}
-            >
+              style={{ background: "#fff" }}>
               <Row className="bg-primary text-light mt-5 p-2">
                 <Col>Heading</Col>
                 <Col className="text-end">
@@ -142,14 +135,11 @@ const Details = () => {
                       <Tooltip id="tooltip-disabled">
                         {show ? "Copied" : "Click to copy"}
                       </Tooltip>
-                    }
-                  >
+                    }>
                     <span
                       className="d-inline-block"
-                      style={{ cursor: "pointer",border:'1px solid red' }}
-                      onClick={handleCopyText}
-                      
-                    >
+                      style={{ cursor: "pointer", border: "1px solid red" }}
+                      onClick={handleCopyText}>
                       <FiClipboard />
                     </span>
                   </OverlayTrigger>
@@ -158,8 +148,8 @@ const Details = () => {
               <Row className="box shadow p-5 ">
                 <span className="text-center" id="imgCopy">
                   {/* {`<img  src="http://localhost:5000/api/v1/preview/${id}" />`} */}
-                   {`<img  src=${finalUrl ? finalUrl: null} />`}
-                  {/* {`<img  src="http://44.206.234.148:5000/api/v1/preview/${id}?test="233" />`} */}
+                  {`<img  src=${finalUrl ? finalUrl : null} />`}
+                  {/* {`<img  src="http://16.171.3.157:5000/api/v1/preview/${id}?test="233" />`} */}
                 </span>
               </Row>
             </Tab>
@@ -176,12 +166,17 @@ const Details = () => {
                             <div key={index}>
                               {object.type === "textbox" ? (
                                 <>
-                              <div className="d-flex justify-content-between">
-                              <span>{object.text}</span>
-                              <span ><FiRotateCcw cursor="pointer" onClick={randomName} fontSize={20} /></span>
-                              </div>
+                                  <div className="d-flex justify-content-between">
+                                    <span>{object.text}</span>
+                                    <span>
+                                      <FiRotateCcw
+                                        cursor="pointer"
+                                        onClick={randomName}
+                                        fontSize={20}
+                                      />
+                                    </span>
+                                  </div>
                                   <InputControl
-                                    
                                     object={object}
                                     inputHandler={inputHandler}
                                     index={index}
@@ -204,9 +199,8 @@ const Details = () => {
                       src={
                         finalUrl
                           ? finalUrl
-                          : 
-                          // `http://localhost:5000/api/v1/preview/${id}`
-                          `http://13.234.238.121:5000/api/v1/preview/${id}`
+                          : // : `http://localhost:5000/api/v1/preview/${id}`
+                            `http://16.171.3.157:5000/api/v1/preview/${id}`
                       }
                       alt=""
                       loading="lazy"

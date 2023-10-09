@@ -48,5 +48,3 @@ app.use("/api/v1", require("../router/routes"));
 app.use("/api/v1/folder", require("../router/folder.route"));
 
 app.listen(port, () => console.log("server running " + port));
-var uptime = process.uptime();
-console.log(format(uptime));
