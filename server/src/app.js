@@ -9,7 +9,7 @@ var bodyParser = require("body-parser");
 connectDB();
 
 // app.use(cors({ origin: "http://localhost:3000" }));
-app.use(cors({ origin: "http://13.234.238.121" }));
+app.use(cors({ origin: "http://16.171.3.157" }));
 app.use(compression({ filter: shouldCompress, level: 6 }));
 
 function shouldCompress(req, res) {
